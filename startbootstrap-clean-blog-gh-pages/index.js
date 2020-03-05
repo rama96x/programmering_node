@@ -24,7 +24,7 @@ const redirectIfAuthenticatedMiddleware = require('./middleware/redirectIfAuthen
 
 app.use(fileUpload())
 
-mongoose.connect('mongodb://localhost/my_database',{useNewUrlParser:true})
+mongoose.connect('mongodb://localhost/my_database2',{useNewUrlParser:true})
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
