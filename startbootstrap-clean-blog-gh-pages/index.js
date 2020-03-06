@@ -46,7 +46,9 @@ app.use(customMiddleWare)*/
 app.use('/posts/store',validateMiddleware)
 
 app.use(expressSession({
-    secret: 'keyboard cat'
+    secret: 'keyboard cat',
+    resave: true,
+    saveUninitialized: true
 }))
 
 global.loggedIn = null;
