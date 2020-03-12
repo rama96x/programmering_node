@@ -1,5 +1,8 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
+//Hjælper med at der ikke kan laves dobbelt brugernavne.
+var uniqueValidator = require('mongoose-unique-validator');
+
 const bcrypt = require('bcrypt')
 
 const UserSchema = new Schema({
@@ -13,6 +16,9 @@ const UserSchema = new Schema({
       required: true
     }
 });
+
+//Fejlmeddelelsen for unikt brugernavn.
+UserSchema.plugin(uniqueValidator);
 
 UserSchema.pre('save',function(next){
   const user = this
