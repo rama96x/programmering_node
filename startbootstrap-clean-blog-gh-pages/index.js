@@ -42,6 +42,7 @@ app.listen(4000,()=>{
     next()
 }
 app.use(customMiddleWare)*/
+//test slet dette
 
 app.use('/posts/store',validateMiddleware)
 
