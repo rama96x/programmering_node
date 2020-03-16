@@ -7,6 +7,11 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
 const fileUpload = require('express-fileupload')
 
+// We make a variable with the controller "storeProduct"
+const storeProductController = require('./controllers/storeProduct');
+// We make a variable with the controller "getProducts"
+const getProductsController = require('./controllers/getProducts');
+
 const newPostController = require('./controllers/newPost')
 const homeController = require('./controllers/home')
 const storePostController = require('./controllers/storePost')
@@ -62,6 +67,12 @@ app.get('/', homeController)
 app.get('/post/:id',getPostController)
 app.post('/posts/store',authMiddleware,storePostController)
 
+// We try to post the newly added product to the database.
+app.post('/product/new',storeProductController);
+
+// We try to show all products from the database.
+app.get('/products',getProductsController);
+
 app.get('/auth/register',redirectIfAuthenticatedMiddleware,newUserController)
 app.post('/users/register', redirectIfAuthenticatedMiddleware,storeUserController)
 
@@ -69,4 +80,5 @@ app.get('/auth/login',redirectIfAuthenticatedMiddleware,loginController)
 app.post('/users/login',redirectIfAuthenticatedMiddleware,loginUserController)
 app.get('/auth/logout',logoutController)
 app.use((req,res)=> res.render('notfound'));
+
 

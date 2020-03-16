@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d309f18-6ff0-4bd5-904d-d375d0b50219" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/programmering_node.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Product.js" afterDir="false" />
+    <list default="true" id="2d309f18-6ff0-4bd5-904d-d375d0b50219" name="Default Changelist" comment="Creation of class &quot;Product&quot;">
+      <change afterPath="$PROJECT_DIR$/controllers/getProducts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/storeProduct.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/LineItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/products.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/create.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/create.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/navbar.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/navbar.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,14 +83,34 @@
       <workItem from="1583269787349" duration="1441000" />
       <workItem from="1583272957147" duration="496000" />
       <workItem from="1583339058118" duration="5327000" />
-      <workItem from="1584352465050" duration="571000" />
+      <workItem from="1584352465050" duration="5676000" />
     </task>
+    <task id="LOCAL-00001" summary="Creation of class &quot;Product&quot;">
+      <created>1584353736987</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584353736987</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Creation of class &quot;Product&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creation of class &quot;Product&quot;" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="278" y="52" key="CommitChangelistDialog2" timestamp="1584360687365">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="278" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1584360687365" />
+    <state x="262" y="78" key="DiffContextDialog" timestamp="1584354230205">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="262" y="78" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1584354230205" />
     <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1584353194544">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -107,9 +131,13 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="431" y="173" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1584352477893" />
-    <state x="503" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584352471082">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1584353741642">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="503" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1584352471082" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1584353741642" />
+    <state x="503" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584353819789">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="503" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1584353819789" />
   </component>
 </project>
