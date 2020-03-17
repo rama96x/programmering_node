@@ -3,8 +3,8 @@ const Schema = mongoose.Schema;
 
 const orderSchema = new Schema({
     orderID: mongoose.Schema.Types.ObjectId,
-    status: String, // måske boolean i stedet.
-    deliveryLocation: String, // kommentar til hvor man er.
+    status: {  type: Boolean,  default: true  },
+    deliveryLocation: String, // kommentar til hvor man er på RF.
     lineItem: { type: mongoose.Schema.Types.ObjectId, ref: 'LineItem', required: true }, // Ret til, når LineItem er klar
     billingAddress: {
         customerID: { type: mongoose.Schema.Types.ObjectId, ref: 'customerID', required: true }, // Ret til, når User er klar
@@ -13,13 +13,17 @@ const orderSchema = new Schema({
         zipCode: Number,
         city: String,
         country: String,
-    },
-   lineStander:
-
-
+    }
 
 });
 
 const Order = mongoose.model('Order',orderSchema);
 module.exports = Order;
+
+
+
+// calcOrderTotal, quantity * price = OrderTotal
+
+
+// calcVAT, OrderTotal * 1,25
 
