@@ -13,10 +13,7 @@ const orderSchema = new Schema({
         zipCode: Number,
         city: String,
         country: String,
-    },
-   lineStander:
-
-
+    }
 
 });
 
