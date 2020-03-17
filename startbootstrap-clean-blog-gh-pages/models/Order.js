@@ -27,3 +27,4 @@ module.exports = Order;
 
 // calcVAT, OrderTotal * 1,25
 
+// OrderTotal + Linestander price
