@@ -22,8 +22,7 @@ module.exports = Order;
 
 
 
-// calcOrderTotal, quantity * price = OrderTotal
-
+// calcOrderTotal, (quantity * price) + LS gebyr = OrderTotal
 
 // calcVAT, OrderTotal * 1,25
 
