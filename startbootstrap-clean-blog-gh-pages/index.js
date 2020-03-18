@@ -26,6 +26,7 @@ const logoutController = require('./controllers/logout')
 const validateMiddleware = require("./middleware/validationMiddleware");
 const authMiddleware = require('./middleware/authMiddleware');
 const redirectIfAuthenticatedMiddleware = require('./middleware/redirectIfAuthenticatedMiddleware')
+const loginAdminController = require('./controllers/loginAdmin')
 
 app.use(fileUpload())
 
@@ -79,4 +80,6 @@ app.post('/users/register', redirectIfAuthenticatedMiddleware,storeUserControlle
 app.get('/auth/login',redirectIfAuthenticatedMiddleware,loginController)
 app.post('/users/login',redirectIfAuthenticatedMiddleware,loginUserController)
 app.get('/auth/logout',logoutController)
+app.get('/auth/loginAdmin', loginAdminController)
+app.post('/users/')
 app.use((req,res)=> res.render('notfound'));

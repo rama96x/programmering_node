@@ -5,7 +5,7 @@ var uniqueValidator = require('mongoose-unique-validator');
 
 const bcrypt = require('bcrypt')
 
-const Admin = new Schema({
+const adminSchema = new Schema({
     username: {
         type: String,
         required: true,
@@ -32,15 +32,15 @@ const Admin = new Schema({
 });
 
 //Fejlmeddelelsen for unikt brugernavn.
-Admin.plugin(uniqueValidator);
+adminSchema.plugin(uniqueValidator);
 
-Admin.pre('save',function(next){
-    const user = this
-    bcrypt.hash(user.password,10,(error,hash)=>{
-        user.password = hash
+adminSchema.pre('save',function(next){
+    const admin = this
+    bcrypt.hash(admin.password,10,(error,hash)=>{
+        admin.password = hash
         next()
     });
 });
 
-const User = mongoose.model('User',Admin);
-module.exports = User
+const Admin = mongoose.model('Admin',adminSchema);
+module.exports = Admin
