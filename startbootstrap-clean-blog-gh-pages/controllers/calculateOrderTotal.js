@@ -15,17 +15,10 @@ function calculateOrderTotal(){
     console.log(orderTotal);
 }
 
+calculateOrderTotal();
 
-
-
-/*
-function calculateLineItemTotal(){
-    return this.price * this.quantity;
-}
- */
-
-
-
-}
 
 // Calculate VAT
+function calculateVAT(orderTotal){
+    orderTotal * 1,25;
+}
