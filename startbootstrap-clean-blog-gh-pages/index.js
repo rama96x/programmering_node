@@ -80,5 +80,3 @@ app.get('/auth/login',redirectIfAuthenticatedMiddleware,loginController)
 app.post('/users/login',redirectIfAuthenticatedMiddleware,loginUserController)
 app.get('/auth/logout',logoutController)
 app.use((req,res)=> res.render('notfound'));
-
-
