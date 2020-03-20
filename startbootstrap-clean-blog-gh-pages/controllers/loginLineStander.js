@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt')
-const LineStander = require('../models/Admin')
+const LineStander = require('../models/LineStander')
 
 module.exports = (req,res)=>{
     const { username,password } = req.body;
@@ -12,12 +12,12 @@ module.exports = (req,res)=>{
                     res.redirect('/')
                 }
                 else {
-                    res.redirect('/auth/login')
+                    res.redirect('/auth/loginLineStander')
                 }
             })
         }
         else {
-            res.redirect('/auth/login')
+            res.redirect('/auth/loginLineStander')
         }
     })
 }
