@@ -16,20 +16,27 @@
                     <a class="nav-link" href="/products">Products</a>
                 </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/posts/new"> New Post</a>
+                        <a class="nav-link" href="/posts/new">New Post</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/auth/logout"> Log out</a>
+                        <a class="nav-link" href="/auth/logout">Log out</a>
                     </li>
                 <% } %>
                 <% if(!loggedIn) { %>
                 <li class="nav-item">
-                    <a class="nav-link" href="/auth/login"> Login</a>
+                    <a class="nav-link" href="/auth/login">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/auth/register">New User </a>
+                    <a class="nav-link" href="/auth/register">New User</a>
                 </li>
                 <% } %>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth/loginAdmin">Admin Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth/loginLineStander">LineStander login</a>
+                </li>
             </ul>
         </div>
     </div>

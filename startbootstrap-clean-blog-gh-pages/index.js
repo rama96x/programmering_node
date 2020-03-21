@@ -30,6 +30,10 @@ const validateMiddleware = require("./middleware/validationMiddleware");
 const authMiddleware = require('./middleware/authMiddleware');
 const redirectIfAuthenticatedMiddleware = require('./middleware/redirectIfAuthenticatedMiddleware')
 
+//Admin og LineStander login
+const loginAdminController = require('./controllers/loginAdmin')
+const loginLineStanderController = require('./controllers/loginLineStander')
+
 app.use(fileUpload())
 
 mongoose.connect('mongodb://localhost/my_database2',{useNewUrlParser:true, useUnifiedTopology: true})
@@ -71,7 +75,7 @@ app.get('/post/:id',getPostController)
 app.post('/posts/store',authMiddleware,storePostController)
 
 // We try to post the newly added product to the database.
-//app.post('/product/new',storeProductController);
+app.post('/product/new',storeProductController);
 
 // We try to show all products from the database.
 app.get('/products',getProductsController);
@@ -88,5 +92,9 @@ app.post('/users/register', redirectIfAuthenticatedMiddleware,storeUserControlle
 app.get('/auth/login',redirectIfAuthenticatedMiddleware,loginController)
 app.post('/users/login',redirectIfAuthenticatedMiddleware,loginUserController)
 app.get('/auth/logout',logoutController)
+//Admin og LineStander login
+app.get('/auth/loginAdmin', loginAdminController)
+app.get('/auth/loginLineStander', loginLineStanderController)
+app.post('/users/')
 app.use((req,res)=> res.render('notfound'));
 
