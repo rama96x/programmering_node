@@ -4,11 +4,32 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Vi kan også bare lave new Schema om til "new mongoose.Schema" for at spare koden ovenfor.
+
+
 const LineItemSchema = new Schema({
     userId: {
         type: mongoose.Schema.Types.ObjectId,
-            ref: "User"
+        ref: "User"
     },
+    products: [
+        {
+            productId: Number,
+            productName: String,
+            productPrice: Number,
+            quantity: Number
+        }
+    ],
+    active: {
+        type: Boolean,
+        default: true
+    },
+    modifiedOn: {
+        type: Date,
+        default: Date.now()
+    }
+
+});
+    /*
     product: [
         {
             productID: {
@@ -28,8 +49,10 @@ const LineItemSchema = new Schema({
     lineItemPrice: Number,
     quantity: Number,
 });
-
+*/
 const LineItem = mongoose.model('LineItem',LineItemSchema);
 module.exports = LineItem;
+
+
 
 

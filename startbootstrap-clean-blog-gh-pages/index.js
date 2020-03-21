@@ -12,6 +12,9 @@ const storeProductController = require('./controllers/storeProduct');
 // We make a variable with the controller "getProducts"
 const getProductsController = require('./controllers/getProducts');
 
+//
+const storeLineItemController = require('./controllers/storeLineItem');
+
 const newPostController = require('./controllers/newPost')
 const homeController = require('./controllers/home')
 const storePostController = require('./controllers/storePost')
@@ -68,10 +71,16 @@ app.get('/post/:id',getPostController)
 app.post('/posts/store',authMiddleware,storePostController)
 
 // We try to post the newly added product to the database.
-app.post('/product/new',storeProductController);
+//app.post('/product/new',storeProductController);
 
 // We try to show all products from the database.
 app.get('/products',getProductsController);
+
+//
+app.post('/lineItem/new',storeLineItemController);
+
+
+//app.get('/lineItem',)
 
 app.get('/auth/register',redirectIfAuthenticatedMiddleware,newUserController)
 app.post('/users/register', redirectIfAuthenticatedMiddleware,storeUserController)
@@ -80,5 +89,4 @@ app.get('/auth/login',redirectIfAuthenticatedMiddleware,loginController)
 app.post('/users/login',redirectIfAuthenticatedMiddleware,loginUserController)
 app.get('/auth/logout',logoutController)
 app.use((req,res)=> res.render('notfound'));
-
 
