@@ -23,18 +23,25 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-            <% for(var i = 0; i < products.length; i++) { %>
-                <div class="post-preview">
-                    <a href="/lineItem/new">
+            <!-- <form action="/lineItem/new" methed="POST"> -->
+                <% for(var i = 0; i < products.length; i++) { %>
+                    <div class="post-preview">
                         <h2 class="post-title">
-                            <%= products[i].productName %>
-                        </h2>
-                        <h3 class="post-subtitle">
-                            <%= products[i].productPrice + ",-"%>
-                        </h3>
-                    </a>
+                                <%= products[i].productName %>
+                            </h2>
+                            <h3 class="post-subtitle">
+                                <%= products[i].price + ",-"%>
+                            </h3>
+                        <!-- <div>
+                            <label class="post-">Quantity</label>
+                            <input type="number" class="form-control" placeholder="How many do you want?" id="quantity" name="quantity">
+                        </div> -->
+                    </div>
+                <div class="form-group">
+                    <a href="/lineItem/<%= products[i]._id%>" class="btn btn-primary" role="button">Add to cart</a>
                 </div>
             <% } %>
+            <!-- </form> -->
             <!-- Pager -->
             <div class="clearfix">
                 <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>

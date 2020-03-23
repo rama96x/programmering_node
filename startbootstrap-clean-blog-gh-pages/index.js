@@ -3,16 +3,18 @@ const express = require('express')
 const app = new express()
 const ejs = require('ejs')
 const mongoose = require('mongoose');
+const session = require('express-session');
 
 const bodyParser = require('body-parser')
 const fileUpload = require('express-fileupload')
+const mongoStore = require('connect-mongo')(session);
 
 // We make a variable with the controller "storeProduct"
 const storeProductController = require('./controllers/storeProduct');
 // We make a variable with the controller "getProducts"
 const getProductsController = require('./controllers/getProducts');
 
-//
+// storeLineItem
 const storeLineItemController = require('./controllers/storeLineItem');
 
 const newPostController = require('./controllers/newPost')
@@ -23,7 +25,6 @@ const newUserController = require('./controllers/newUser')
 const storeUserController = require('./controllers/storeUser')
 const loginController = require('./controllers/login')
 const loginUserController = require('./controllers/loginUser')
-const expressSession = require('express-session')
 const logoutController = require('./controllers/logout')
 
 const validateMiddleware = require("./middleware/validationMiddleware");
@@ -57,10 +58,12 @@ app.use(customMiddleWare)*/
 
 app.use('/posts/store',validateMiddleware)
 
-app.use(expressSession({
+app.use(session({
     secret: 'keyboard cat',
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: true,
+    store: new mongoStore({mongooseConnection: mongoose.connection}),
+    cookie: {maxAge: 180 * 60 * 1000}
 }))
 
 global.loggedIn = null;
@@ -80,8 +83,13 @@ app.post('/product/new',storeProductController);
 // We try to show all products from the database.
 app.get('/products',getProductsController);
 
-//
-app.post('/lineItem/new',storeLineItemController);
+
+// Now, we'll try to make a page for the individual product
+app.get('/lineItem/:id',storeLineItemController);
+
+
+
+// app.post('/lineItem/new',storeLineItemController);
 
 
 //app.get('/lineItem',)

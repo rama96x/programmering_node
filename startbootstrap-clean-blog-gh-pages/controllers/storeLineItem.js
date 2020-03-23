@@ -1,22 +1,61 @@
-
-const User = require('../models/User');
+const Product = require('../models/Product');
 const LineItem = require('../models/LineItem');
 const path = require('path');
 
 
 module.exports = (req,res)=> {
+
+    let productId = req.params.id;
+    let lineItems = new LineItem(req.session.lineItems ? req.session.lineItems : {});
+
+    Product.findById(productId, function (err, product) {
+        if (err) {
+            return res.redirect('/');
+        }
+        lineItems.add(product, product.id);
+        req.session.lineItems = lineItems;
+        console.log(lineItems);
+        res.redirect('/products');
+    });
+
+};
+
+    /*
+    const products = Product.find({});
+    console.log(products);
+    LineItem.create(req.body,(error,lineItem)=> {
+        for(let i = 0; i < products.length; i++){
+            i = LineItem.products;
+            products[i].productsId = LineItem.products.productsId;
+            console.log(i);
+            console.log(products[i].productsId);
+        }
+
+        if (error) {
+            return res.redirect('/');
+        } else return res.redirect('/products');
+    });
+
+    /* const testtest = await console.log(Product.findById(req.params.id))
+    console.log(testtest)
+    //const test2 = await Product.findById(req.params.id)
+    res.render('products',{
+        testtest
+        //test2
+    })
+
+     */
+
+// };
+
+    /*
     //const { product, lineItemPrice, quantity } = req.body;
 
     //LineItem.create({
     const {productId, productName, productPrice, quantity} = req.body;
 
-    let userId = req.session.userId; //TODO: the logged in user id
+    let userId = req.session.userId; // the logged in user id
 
-    /*for (let i = 0; i < User._id.length; i++){
-        let i = userId
-    }
-
-     */
     console.log(userId);
 
 
@@ -52,6 +91,16 @@ module.exports = (req,res)=> {
         res.status(500).send("Something went wrong");
     }
 };
+
+     */
+
+
+
+
+
+
+
+
         /*product: [
             {
                 productID: {
