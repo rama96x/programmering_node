@@ -17,6 +17,9 @@ const getProductsController = require('./controllers/getProducts');
 // storeLineItem
 const storeLineItemController = require('./controllers/storeLineItem');
 
+// getLineItem
+const getLineItemController = require('./controllers/getLineItems');
+
 const newPostController = require('./controllers/newPost')
 const homeController = require('./controllers/home')
 const storePostController = require('./controllers/storePost')
@@ -50,6 +53,7 @@ app.listen(4000,()=>{
     console.log('App listening on port 4000')
 })
 
+
 /*const customMiddleWare = (req,res,next)=>{
     console.log('Custom middle ware called')
     next()
@@ -64,7 +68,7 @@ app.use(session({
     saveUninitialized: true,
     store: new mongoStore({mongooseConnection: mongoose.connection}),
     cookie: {maxAge: 180 * 60 * 1000}
-}))
+}));
 
 global.loggedIn = null;
 app.use("*",(req,res,next)=>{
@@ -89,7 +93,8 @@ app.get('/lineItem/:id',storeLineItemController);
 
 
 
-// app.post('/lineItem/new',storeLineItemController);
+app.get('/lineItems',getLineItemController);
+
 
 
 //app.get('/lineItem',)

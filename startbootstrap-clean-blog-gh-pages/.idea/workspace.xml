@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d309f18-6ff0-4bd5-904d-d375d0b50219" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controllers/getLineItems.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/lineItems.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/getProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/getProducts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/storeLineItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/storeLineItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/LineItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/LineItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/create.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/create.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/products.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/products.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/navbar.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/navbar.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +88,7 @@
       <workItem from="1584519524046" duration="6709000" />
       <workItem from="1584810260406" duration="11594000" />
       <workItem from="1584879743024" duration="2697000" />
-      <workItem from="1584950921775" duration="7363000" />
+      <workItem from="1584950921775" duration="21790000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of class &quot;Product&quot;">
       <created>1584353736987</created>
@@ -127,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584810330221</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="lineItem virker fandme!">
+      <created>1584966747365</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584966747365</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,17 +144,22 @@
     <MESSAGE value="LineItem + changes around the Product class" />
     <MESSAGE value="LineItem + changes in the navbar" />
     <MESSAGE value="Har prøvet at lave lineItem, det går sgu ikke så godt..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Har prøvet at lave lineItem, det går sgu ikke så godt..." />
+    <MESSAGE value="lineItem virker fandme!" />
+    <option name="LAST_COMMIT_MESSAGE" value="lineItem virker fandme!" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584814981728">
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585478792640">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1584814981728" />
-    <state x="278" y="52" key="CommitChangelistDialog2" timestamp="1584810330054">
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1585478792640" />
+    <state x="441" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584972062864">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="278" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1584810330054" />
+    <state x="441" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1584972062864" />
+    <state x="278" y="52" key="CommitChangelistDialog2" timestamp="1584966747167">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="278" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1584966747167" />
     <state x="262" y="78" key="DiffContextDialog" timestamp="1584354230205">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -182,14 +192,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1584435408665" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1584443031749">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1584966761395">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1584443031749" />
-    <state x="503" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584811619842">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1584966761395" />
+    <state x="503" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585470069505">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="503" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1584811619842" />
+    <state x="503" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1585470069505" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1584956371949">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
